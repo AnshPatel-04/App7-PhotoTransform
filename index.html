@@ -103,18 +103,6 @@
 
  /* PUT ANY CHANGES TO THE JAVASCRIPT HERE */
  
-         
- var imageData = context.getImageData (0, 0, 600, 500); 
- var data = imageData.data; 
-         
- // code for changing image color
- for (var i = 0; i < data.length; i += 4){ //  runs loop through pixel data. Starting position for the loop is 0.
-  datali] = 0; // changes red color instensity in pixels to 0
-  datali+1] = 0; // changes green color intensity in pixels to 0
-  
-}
-context2.putImageData (imageData, 0, 0); // Puts the image with all the functions applied onto the second.
- 
  
  } // end of img.onload
  
@@ -163,6 +151,16 @@ context2.putImageData (imageData, 0, 0); // Puts the image with all the function
     context.font = '20pt Calibri';
     context.fillStyle = "blue";
     context.fillText("Processed image will go here", 10, 20);
+    var imageData = context.getImageData (0, 0, 600, 500); 
+    var data = imageData.data; 
+         
+  // code for changing image color
+    for (var i = 0; i < data.length; i += 4){ //  runs loop through pixel data. Starting position for the loop is 0.
+    datali] = 0; // changes red color instensity in pixels to 0
+    datali+1] = 0; // changes green color intensity in pixels to 0
+  
+   }
+   context2.putImageData (imageData, 0, 0); // Puts the image with all the functions applied onto the second.
  </script>
 
 
