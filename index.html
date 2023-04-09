@@ -103,7 +103,22 @@
 
  /* PUT ANY CHANGES TO THE JAVASCRIPT HERE */
  
- 
+ var canvas2 = document.getElementById("secondCanvas");
+ var context2 = canvas2.getContext ("2d"); 
+ context.font = '20pt Calibri';
+ context.fillStyle = "blue";
+ context.fillText("Processed image will go here", 10, 20);
+         
+ var imageData = context.getImageData (0, 0, 600, 500); 
+ var data = imageData.data; 
+         
+ // code for changing image color
+ for (var i = 0; i < data.length; i += 4){ //  runs loop through pixel data. Starting position for the loop is 0.
+  datali] = 0; // changes red color instensity in pixels to 0
+  datali+1] = 0; // changes green color intensity in pixels to 0
+  
+}
+context2.putImageData (imageData, 0, 0); // Puts the image with all the functions applied onto the second.
  
  
  } // end of img.onload
@@ -145,11 +160,11 @@
     context.fillStyle = "black";
     context.fillText("Original image will go here", 10, 20);
     
-    var canvas2 = document.getElementById('blueCanvas');
+   /* var canvas2 = document.getElementById('blueCanvas');
     var context = canvas2.getContext("2d");
     context.font = '20pt Calibri';
     context.fillStyle = "blue";
-    context.fillText("Processed image will go here", 10, 20);
+    context.fillText("Processed image will go here", 10, 20); */
   </script>
   
  <!-- <canvas id="blueCanvas" width=600 height=500 style="border:1px solid #d3d3d3;"></canvas>
