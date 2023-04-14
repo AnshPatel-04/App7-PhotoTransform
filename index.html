@@ -104,19 +104,19 @@
 
           /* PUT ANY CHANGES TO THE JAVASCRIPT HERE  */
           
-         var canvas2 = document.getElementById('blueCanvas');
-         var context2 = canvas.getContext("2d");
+         var canvas2 = document.getElementById('blueCanvas'); //calls second canvas, where processed image will go. 
+         var context2 = canvas.getContext("2d"); // defines canvas with 2d paramter
          
-         var imageData = context.getImageData(0 , 0, 600, 500);
-         var data = imageData.data;
+         var imageData = context.getImageData(0 , 0, 600, 500); //gets pixel data from image on first canvas
+         var data = imageData.data; //retuen object that stores pixel data
           
-         for (var i = 0; i < data.length; i += 4){ 
-          data[i] = 0; 
-          data[i+1] = 0; 
+         for (var i = 0; i < data.length; i += 4){ //run loop through pixel data starting at 0
+          data[i] = 0; //red intensity of all pixels set to 0
+          data[i+1] = 0; //green intensity of all pixels set to 0
           
          }
          
-         context2.putImageData(imageData, 0, 0);
+         context2.putImageData(imageData, 0, 0); //puts processed image onto second canvas 
           
           
         } // end of img.onload
@@ -149,21 +149,21 @@
       <div id="messageDisplayArea"></div>
       
       <canvas id="myCanvas" width=600 height=500 style="border:1px solid #d3d3d3;"></canvas>
-      <script> /* This script initiates the cavas and puts the text on the canvas "myCanvas" */
+      <script> /* This script initiates the canvas and puts the text on the canvas "myCanvas" */
         var canvas = document.getElementById('myCanvas');
-        var context = canvas.getContext("2d");
-        context.font = '20pt Calibri';
-        context.fillStyle = "black";
-        context.fillText("Original image will go here", 10, 20);
+        var context = canvas.getContext("2d"); //defines parameter for 2d canvas
+        context.font = '20pt Calibri'; //text font
+        context.fillStyle = "black"; //text color
+        context.fillText("Original image will go here", 10, 20); //text on canvas
       </script>
      
      <canvas id="blueCanvas" width=600 height=500 style="border:1px solid #d3d3d3;"></canvas>
-     <script>
+     <script> /* Initiates canvas for processed image and puts the text on the canvas "blueCanvas" 
         var canvas2 = document.getElementById('blueCanvas');
-        var context2 = canvas2.getContext("2d");
-        context2.font = '20pt Calibri';
-        context2.fillStyle = "blue";
-        context2.fillText("Processed image will go here", 10, 20);
+        var context2 = canvas2.getContext("2d"); //defines paramter for 2d canvas
+        context2.font = '20pt Calibri'; //text font 
+        context2.fillStyle = "blue"; //text color
+        context2.fillText("Processed image will go here", 10, 20); //text on canvas
       </script>
 
     </div><!-- /content -->
