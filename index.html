@@ -105,7 +105,7 @@
           /* PUT ANY CHANGES TO THE JAVASCRIPT HERE  */
           
          var canvas2 = document.getElementById('blueCanvas'); //calls second canvas, where processed image will go. 
-         var context2 = canvas.getContext("2d"); // defines canvas with 2d paramter
+         var context2 = canvas2.getContext("2d"); // defines canvas with 2d paramter
          
          var imageData = context.getImageData(0 , 0, 600, 500); //gets pixel data from image on first canvas
          var data = imageData.data; //retuen object that stores pixel data
