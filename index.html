@@ -104,7 +104,7 @@
 
           /* PUT ANY CHANGES TO THE JAVASCRIPT HERE  */
           
-         var canvas2 = document.getElementById('blueCanvas');
+         var canvas2 = document.getElementById('myCanvas2');
          var context2 = canvas.getContext("2d");
          
          var imageData = context.getImageData(0 , 0, 600, 500);
@@ -157,9 +157,9 @@
         context.fillText("Original image will go here", 10, 20);
       </script>
      
-     <canvas id="blueCanvas" width=600 height=500 style="border:1px solid #d3d3d3;"></canvas>
+     <canvas id="myCanvas2" width=600 height=500 style="border:1px solid #d3d3d3;"></canvas>
      <script>
-        var canvas2 = document.getElementById('blueCanvas');
+        var canvas2 = document.getElementById('myCanvas2');
         var context2 = canvas2.getContext("2d");
         context.font = '20pt Calibri';
         context.fillStyle = "blue";
